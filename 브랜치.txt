@@ -1,0 +1,47 @@
+1. git branch 브랜치이름
+  브랜치 생성
+
+2. git switch 브랜치이름 
+  해당 브랜치로 이동
+
+## git log 해서 head에 내가 어느 브랜치에 있는지 알 수 있음
+
+3. git merge 브랜치명 
+  git 합치기
+  (1) git switch main 메인으로 이동 후
+  (2) git merge 합치고싶은 브랜치명 
+  (3) git add .  => git commit -m 커밋명  해서 저장
+
+4. 충돌
+ 메인에서 변경된 줄과 브랜치에서 변경된 줄이 충돌될 경우
+ 한번에 합쳐지지 않고 충돌된 부분을 보여주는데 그 부분 잘 수정해서 저장하면 됨
+
+ 5.흐름
+
+  (메인브랜치)commit1-----commit2------commit3----------------commit4
+                           |                                   | (merge)
+                           |                                   |
+                         commit2-1 ------commit2-2 ---------commit2-3
+                       (브랜치생성)
+
+6. merge 방법
+  (1) 3-way merge => 위와 같은 흐름
+
+          (메인브랜치)commit1-----commit2------commit3----------------commit4
+                           |                                   | (merge)
+                           |                                   |
+                         commit2-1 ------commit2-2 ---------commit2-3
+                       (브랜치생성)
+
+
+  (2) fast-forward merge => 브랜치 생성시점부터 main브랜치에 추가 commit이 없는 경우
+      merge 시키면 자동으로 new 브랜치에게 니가 앞으로 main브랜치야 라고 한다 
+
+        (메인브랜치)commit1-----commit2
+                                  |                                    
+                                  |                                   
+                               commit2-1 ------commit2-2 ---------commit2-3  =>main 브랜치
+                               (new브랜치)                          (merge)
+      
+      "기준이 되는 브랜치에 신규 commit이 없으면" 자동으로 fast-forward merge가 발동,
+      물론 싫으면 git merge --no-ff 브랜치명 해서 강제로 3-way merge 할 수도 있습니다. 

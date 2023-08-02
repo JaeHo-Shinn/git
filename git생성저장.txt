@@ -1,0 +1,59 @@
+==== 깃 생성 ===
+
+1. git init  = 깃 착수 (initiate)
+
+2. git add 
+  (1)git add 파일명.확장자 (git add gitstudy.txt) 해당 파일을 add => git add 파일 파일 이렇게 복수 저정 가능
+  (2)git add . (add 한칸 띄고 .) 폴더 내 변경 추가 제거된 모든 파일을 add
+
+3. git commit -m
+   add된 내용을 git생성 (-m은 뒤에 메시지를 입력하겠다)
+
+4.흐름
+   작업폴더 -> staging area -> repository
+           add             commit
+
+@@@@@@@
+VSCode 에디터의 경우 왼쪽 git 처럼 생긴 메뉴 들어가보면
+
+지금 어떤 파일이 변경되고 추가되었는지 쭉 알려줍니다. 
+
++ 누르면 git add 한거랑 똑같고 
+
+체크마크 누르면 git commit 한거랑 똑같습니다. 
+
+파일이 많고 복잡하면 이거 쓰는게 더 나을 수도 있습니다. 
+@@@@@@@
+
+
+5.git status
+  지금 변경된 파일, 스테이징 파일 등등 상태를 보여줌
+
+6.git restore --staged 파일명 (혹은 . )
+  스테이징된 파일을 취소
+
+7.git log
+  git log --all --oneline
+  git log --all --oneline --graph
+  git log를 보기 쉽게 알려줌
+  **입력 후엔 Vim 에디터가 켜져서 j, k 키로 위아래 스크롤이 가능하고 q 키로 종료
+
+8.git diff 
+  commit 하기 바로 전 코드와의 차이점 보여줌
+    
+  git diff 커밋id
+  최근 commit과 비교하는게 아니라 과거의 특정 commit과 현재 파일을 비교하고 싶으면 커밋ID를 명시
+  (커밋ID는 git log --oneline 이런거 입력하면 보이는 노란 글자들)
+  
+  git diff 커밋id1 커밋id2
+  과거의 특정 commit 2개 간의 차이점 비교도 가능
+
+  git dif ==> git difftool 이용하면 조금 더 보기좋음
+
+  **입력 후엔 Vim 에디터가 켜져서 j, k 키로 위아래 스크롤이 가능하고 q 키로 종료
+
+  git difftool을 Vim 말고 VSCode로 열고 싶으면
+  git config --global diff.tool vscode
+  git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
+
+  터미널에 차례로 2개 입력하면 됩니다.

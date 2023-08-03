@@ -1,0 +1,6 @@
+1. add -> staging area  -> commit  -> repository
+  => offline의 repository에 저장됨 => 작업폴더의 숨김파일보기 하면 볼 수 있음
+
+2. 위의 repository를 online repository에 공유하자 => 협업 가능, 온라인 백업
+  온라인 online repository에 공유하는 것을 pusy라고 한다. 
+   대표적인 online repository는   git hub

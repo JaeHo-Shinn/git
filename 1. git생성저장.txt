@@ -1,6 +1,6 @@
 ==== 깃 생성 ===
 
-1. git init  = 깃 착수 (initiate)
+1. git init  = 깃 착수 (initiate) offline repository생성
 
 2. git add 
   (1)git add 파일명.확장자 (git add gitstudy.txt) 해당 파일을 add => git add 파일 파일 이렇게 복수 저정 가능

@@ -1,0 +1,24 @@
+어디로 되돌아 갈까
+
+1. commit 1 => c1
+
+2. commit 2 => c2
+
+3. commit 3 => c3
+
+
+
+** git log --oneline 
+ => commit 내역 보기, 왼쪽 노란색이 commit의 고유 id  
+ => 이 아이디를 이용해야 그 고유 아이디로 되돌려 주세요 할 수 있다
+
+
+1. 파일 되돌리려면 
+ (1)git restore 파일명                       =>최근 commit 된 상태로 현재 파일의 수정내역
+ (2)git restore --source 커밋아이디 파일명    =>이러면 입력한 파일이 특정 커밋아이디 시점으로 복구됩니다. 
+ (3)git restore --staged 파일명              =>이건 복구랑 상관없지만 이러면 특정 파일을 staging 취소할 수 있습니다. 
+
+2. commit 되돌리려면 git revert
+  git revert 커밋아이디 => 해당 커밋에서 작성한 내용을 삭제하고 새로운 커밋을 만들어줌
+
+3. 시간을 되돌리려면 git reset  => 함부로 사용하지 말 것 나중에 필요한 경우에 찾아봐

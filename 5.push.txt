@@ -10,5 +10,15 @@
    git push -u https://github.com/JaeHo-Shinn/git.git main
 
 4. 주소를 변수로 저장
- git remote add 변수명 주소
- 
+   git remote add 변수명 주소  => 주소를 변수로 저장
+   git push -u 변수명 브랜치명  => push  
+**** -u는 방금 했던 주소를 기억하라 라는 뜻  => 이 다음 부터는 git push만 해도 됨
+**** 변수 목록 살펴보기  git remote -v
+
+5. 내려받기
+
+   git clone https://원격저장소주소
+
+6. 올리지 않는 파일
+   원격 저장소에 올리지 않는 파일은
+   .gitignore  => 작성법 구글

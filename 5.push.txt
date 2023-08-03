@@ -4,3 +4,11 @@
 2. 위의 repository를 online repository에 공유하자 => 협업 가능, 온라인 백업
   온라인 online repository에 공유하는 것을 pusy라고 한다. 
    대표적인 online repository는   git hub
+
+3.명령어
+   git push -u 원격저장소주소 브랜치명
+   git push -u https://github.com/JaeHo-Shinn/git.git main
+
+4. 주소를 변수로 저장
+ git remote add 변수명 주소
+ 

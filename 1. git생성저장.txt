@@ -1,6 +1,6 @@
 ==== 깃 생성 ===
 
-1. git init  = 깃 착수 (initiate) offline repository생성
+1. git init  = 깃 개시 (initialize) offline repository생성
 
 2. git add 
   (1)git add 파일명.확장자 (git add gitstudy.txt) 해당 파일을 add => git add 파일 파일 이렇게 복수 저정 가능
@@ -57,3 +57,7 @@ VSCode 에디터의 경우 왼쪽 git 처럼 생긴 메뉴 들어가보면
   git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
 
   터미널에 차례로 2개 입력하면 됩니다.
+
+
+  참고 사이트
+https://hackmd.io/@oW_dDxdsRoSpl0M64Tfg2g/ByfwpNJ-K
